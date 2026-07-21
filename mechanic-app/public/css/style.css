@@ -1,0 +1,223 @@
+:root {
+  --charcoal: #1e2124;
+  --charcoal-light: #2a2e33;
+  --steel: #4a5158;
+  --safety-orange: #ff6b1a;
+  --safety-orange-dark: #e2570f;
+  --off-white: #f2f1ed;
+  --success: #2e9e5b;
+  --pending: #d9a441;
+  --progress: #3b82c4;
+  --border: #3a3f45;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--off-white);
+  color: var(--charcoal);
+}
+
+/* ---------- Header / Nav ---------- */
+header {
+  background: var(--charcoal);
+  color: var(--off-white);
+  padding: 18px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--safety-orange);
+}
+
+header .brand {
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+header .brand span { color: var(--safety-orange); }
+
+nav a {
+  color: var(--off-white);
+  text-decoration: none;
+  margin-left: 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+nav a:hover { color: var(--safety-orange); }
+
+/* ---------- Layout ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.hero {
+  background: var(--charcoal);
+  color: var(--off-white);
+  padding: 60px 32px;
+  border-radius: 6px;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0 0 12px;
+}
+
+.hero h1 span { color: var(--safety-orange); }
+
+.hero p {
+  color: #c7cad0;
+  max-width: 560px;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--safety-orange);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 16px;
+}
+
+.btn:hover { background: var(--safety-orange-dark); }
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--off-white);
+  color: var(--off-white);
+}
+
+section { margin-bottom: 48px; }
+
+section h2 {
+  font-size: 1.5rem;
+  border-left: 5px solid var(--safety-orange);
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.card h3 { margin-top: 0; color: var(--charcoal); }
+.card .price { color: var(--safety-orange-dark); font-weight: 700; }
+
+/* ---------- Forms ---------- */
+form {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 24px;
+  max-width: 520px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 14px 0 6px;
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+textarea { resize: vertical; min-height: 80px; }
+
+.msg {
+  padding: 12px 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.msg.success { background: #e2f6e9; color: var(--success); }
+.msg.error { background: #fce8e6; color: #c0392b; }
+
+/* ---------- Dashboard ---------- */
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.badge {
+  background: var(--safety-orange);
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  margin-left: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+th { background: var(--charcoal); color: var(--off-white); }
+
+tr.new-row { background: #fff6ec; }
+
+.status-pill {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.status-pending { background: var(--pending); }
+.status-in-progress { background: var(--progress); }
+.status-completed { background: var(--success); }
+
+select.status-select {
+  padding: 6px;
+  font-size: 0.85rem;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--steel);
+  font-size: 0.85rem;
+}

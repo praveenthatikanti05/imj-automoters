@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IMJ Automoters</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">IMJ <span>Automoters</span></div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#request">Request Service</a>
+    <a href="login.html">Mechanic Login</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <h1>Honest repairs. <span>Fast turnaround.</span></h1>
+    <p>IMJ Automoters has been keeping local vehicles running safely for over 15 years. Tell us what's wrong and we'll get back to you fast.</p>
+    <a href="#request" class="btn">Request Service</a>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We're a family-owned repair shop specializing in everything from routine maintenance to major engine and transmission work. Our certified mechanics use quality parts and stand behind every job with a workmanship guarantee.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid" id="servicesGrid">
+      <p>Loading services...</p>
+    </div>
+  </section>
+
+  <section id="request">
+    <h2>Request a Service</h2>
+    <div id="formMessage"></div>
+    <form id="requestForm">
+      <label for="customerName">Full Name *</label>
+      <input type="text" id="customerName" required>
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email">
+
+      <label for="vehicle">Vehicle (Year / Make / Model) *</label>
+      <input type="text" id="vehicle" placeholder="e.g. 2018 Honda Civic" required>
+
+      <label for="serviceId">Service Needed *</label>
+      <select id="serviceId" required>
+        <option value="">Select a service...</option>
+      </select>
+
+      <label for="notes">Describe the Issue</label>
+      <textarea id="notes" placeholder="Any details that will help the mechanic (noises, warning lights, etc.)"></textarea>
+
+      <button type="submit" class="btn">Submit Request</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>&copy; 2026 IMJ Automoters. All rights reserved.</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

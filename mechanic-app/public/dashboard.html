@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mechanic Dashboard - IMJ Automoters</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">IMJ <span>Automoters</span></div>
+  <nav>
+    <a href="index.html">Customer Site</a>
+    <a href="#" id="logoutLink">Log Out</a>
+  </nav>
+</header>
+
+<main>
+  <div class="dash-header">
+    <h2 style="margin:0; border:none; padding:0;">Service Requests <span class="badge" id="newBadge" style="display:none;"></span></h2>
+    <button class="btn" id="refreshBtn">Refresh</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Received</th>
+        <th>Customer</th>
+        <th>Vehicle</th>
+        <th>Service</th>
+        <th>Notes</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="requestsBody">
+      <tr><td colspan="6">Loading requests...</td></tr>
+    </tbody>
+  </table>
+</main>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "mechanic-service-app",
+  "version": "1.0.0",
+  "description": "Mechanic Service Management System - basic version",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
